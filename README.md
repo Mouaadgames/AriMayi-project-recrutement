@@ -27,6 +27,10 @@ A Next.js web app for candidate recruitment, built with Ant Design, Redux, and m
 
 4. Open `http://localhost:3000/` in your browser.
 
+## Side note
+I don't think this is the best way to manege state 
+in the real world project we will have a DB and `api end points` or `server action` to communicate with it
+
 ## 🛠 Technologies Used
 
 - **Next.js 14** (App Router)
