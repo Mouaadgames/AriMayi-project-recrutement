@@ -1,6 +1,10 @@
-function page() {
+import MainPage from "./MainPage"
+
+async function page({ params }: {
+  params: Promise<{ locale: string }>
+}) {
   return (
-    <div>page</div>
+      <MainPage candId={await params}/>
   )
 }
 export default page

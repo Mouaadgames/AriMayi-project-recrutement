@@ -49,6 +49,12 @@ in the real world project we will have a DB and `api end points` or `server acti
 
 UML diagrams are in the `/docs/` folder.
 
+## TODO
+- use server action to query DB
+- Add dark mode
+- Add job creation page
+- Add auth to secure recruiter page 
+- file upload sys and S3 bucket
 ## 📜 License
 
 MIT License.
