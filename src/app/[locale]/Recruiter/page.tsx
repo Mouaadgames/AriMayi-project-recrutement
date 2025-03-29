@@ -2,14 +2,16 @@
 import { useSelector } from "react-redux"
 import { List } from "antd"
 import { Candidate } from "@/lib/state/candidates/candidatesSlice"
+import { useTranslations } from "next-intl"
 
 function page() {
+  const t = useTranslations("recruiter")
   const data = useSelector((s: any) => s.candidates)
   return (
     <div className="max-w-2xl mx-auto">
       <List
         size="large"
-        header={<p className="text-center">Candidate List</p>}
+        header={<p className="text-center">{t("Candidate List")}</p>}
 
         dataSource={data}
         renderItem={(item: Candidate) => <List.Item className="hover:bg-gray-200 cursor-pointer" onClick={_ => { location.href = "/Recruiter/" + item.id }}>

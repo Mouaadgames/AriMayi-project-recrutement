@@ -1,6 +1,19 @@
 {
   "Home": {
-    "title": "Bonjour world!",
-    "about": "aller a la page About"
+    "available positions": "Postes disponibles"
+  },
+  "nav": {
+    "Home": "Accueil",
+    "panel": "Accéder au panneau recruteur"
+  },
+  "recruiter": {
+    "Candidate List": "Liste des candidats"
+  },
+  "candInfo": {
+    "name": "Nom",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "Uploaded resume": "CV téléchargé"
   }
 }

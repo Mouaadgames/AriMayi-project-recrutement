@@ -2,14 +2,16 @@
 
 import { Job } from '@/lib/state/jobs/jobSlice';
 import { List } from 'antd';
+import { useTranslations } from 'next-intl';
 
 
 function JobsList({ data, setSelectedJob }: any) {
+  const t = useTranslations("Home")
   return (
     <div>
       <List
         size="large"
-        header={<p className="text-center">available positions</p>}
+        header={<p className="text-center">{t("available positions")}</p>}
 
         dataSource={data}
         renderItem={(item: Job) => <List.Item className="hover:bg-gray-200 cursor-pointer" onClick={_ => { setSelectedJob(item) }}>

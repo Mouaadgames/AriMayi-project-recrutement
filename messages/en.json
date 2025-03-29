@@ -1,6 +1,19 @@
 {
   "Home": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+    "available positions": "Available positions"
+  },
+  "nav": {
+    "Home": "Home",
+    "panel": "Access Recruiter panel"
+  },
+  "recruiter": {
+    "Candidate List": "Candidate List"
+  },
+  "candInfo": {
+    "name": "Name",
+    "email": "E-mail",
+    "phone": "Phone",
+    "address": "Address",
+    "Uploaded resume": "Uploaded resume"
   }
 }

@@ -13,7 +13,6 @@ export default function Home() {
 
   // [TO-DO] get jobs from API
   const data = useSelector((state: any) => state.jobs)
-  const [sizes, setSizes] = useState<(number | string)[]>(['30%', '70%']);
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   return (
     <div className="flex flex-col ">

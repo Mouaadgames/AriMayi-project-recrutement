@@ -13,7 +13,7 @@ function AppWrapper({ children }: {
   const { defaultAlgorithm, darkAlgorithm } = theme;
 
 
-  const t = useTranslations()
+  const t = useTranslations("nav")
 
   const Langs = [{
     label: "",
@@ -24,7 +24,7 @@ function AppWrapper({ children }: {
     children: [
       {
         type: 'group',
-        label: 'languages',
+        label: t("lang"),
         children: [
           { label: 'Francais', key: 'fr' },
           { label: 'English', key: 'en' },
@@ -34,7 +34,7 @@ function AppWrapper({ children }: {
   }]
 
   const onClick: MenuProps['onClick'] = (e) => {
-    location.href = e.key
+    location.href = "/" + e.key
 
   };
   return (
@@ -46,8 +46,8 @@ function AppWrapper({ children }: {
       }>
       <Header className="bg-white flex justify-between items-center border-b">
         <div className="flex gap-4">
-          <Link className="underline" href={"/"}>home</Link>
-          <Link className="underline" href={"/Recruiter"}>Access Recruiter panel</Link>
+          <Link className="underline" href={"/"}>{t("Home")}</Link>
+          <Link className="underline" href={"/Recruiter"}>{t("panel")}</Link>
         </div>
         <div className="flex gap-4 items-center">
 
