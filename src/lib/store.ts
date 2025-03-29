@@ -12,7 +12,6 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, candidateSlice);
 const rootReducer = combineReducers({
   candidates: candidateSlice,
   jobs: jobSlice
@@ -28,7 +27,7 @@ export const makeStore = () => {
     return makeConfiguredStore()
   } else {
     const persistedReducer = persistReducer(persistConfig, rootReducer)
-    let store: any = configureStore({
+    const store: any = configureStore({
       reducer: persistedReducer,
     })
     store.__persistor = persistStore(store)

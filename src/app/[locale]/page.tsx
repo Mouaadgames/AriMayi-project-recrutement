@@ -1,6 +1,5 @@
 "use client"
 
-import { useTranslations } from 'next-intl';
 import { Flex } from 'antd';
 import { useState } from "react";
 
@@ -9,7 +8,6 @@ import { Job } from "@/lib/state/jobs/jobSlice";
 import JobDescription from "./JobDescriptionAndForm";
 import JobsList from "./JobsList";
 export default function Home() {
-  const t = useTranslations('Home');
 
   // [TO-DO] get jobs from API
   const data = useSelector((state: any) => state.jobs)

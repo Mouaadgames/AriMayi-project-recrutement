@@ -1,9 +1,7 @@
 "use client"
-import { useSelector, UseSelector } from "react-redux"
-import { List } from "antd"
+import { useSelector } from "react-redux"
 import { useRef } from "react"
 import { Candidate } from "@/lib/state/candidates/candidatesSlice"
-import { notFound } from "next/navigation"
 import CopyButton from "./CopyButton"
 import ViewPDF from "./ViewPDF"
 import { useTranslations } from "next-intl"
@@ -30,7 +28,6 @@ function MainPage({ candId }: {
           <p> <b>{t("address")}</b> : {selectedCandidate.current?.address} <CopyButton text={selectedCandidate.current?.address} /></p>
         </div>
           <p className="flex items-center justify-center gap-1 mb-2">{t("Uploaded resume")} : <ViewPDF link={selectedCandidate.current?.cvLink}/></p>
-        {/* @ts-ignore */}
         <iframe src={selectedCandidate.current?.cvLink} className="w-full flex-1 border rounded-md"></iframe>
       </div>
     </div>

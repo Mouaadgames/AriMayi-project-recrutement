@@ -1,5 +1,4 @@
 "use client"
-import { Link } from "@/i18n/navigation"
 import { addCandidate } from "@/lib/state/candidates/candidatesSlice"
 import { Job } from "@/lib/state/jobs/jobSlice"
 import { Button, Input } from "antd"
@@ -25,7 +24,7 @@ function JobDescription({ job, setSelectedJob }: { job: Job, setSelectedJob: any
     <div className="p-3 ">
       <div className="flex justify-between items-center">
         <div>
-          <button onClick={_ => setSelectedJob(null)} className="hover:bg-gray-200 p-2 rounded-full">
+          <button onClick={() => setSelectedJob(null)} className="hover:bg-gray-200 p-2 rounded-full">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
             </svg>
@@ -37,7 +36,7 @@ function JobDescription({ job, setSelectedJob }: { job: Job, setSelectedJob: any
         </div>
 
         <div className="">
-          <Button type="primary" size="large" onClick={_ => {
+          <Button type="primary" size="large" onClick={() => {
             formRef.current?.scrollIntoView({
               behavior: 'smooth'
             })
@@ -70,7 +69,7 @@ function JobDescription({ job, setSelectedJob }: { job: Job, setSelectedJob: any
             <Input value={address} onChange={e => setAddress(e.target.value)} />
           </label>
 
-          <Button className="mx-auto " type="primary" disabled={!isFilled} onClick={_ => {
+          <Button className="mx-auto " type="primary" disabled={!isFilled} onClick={() => {
             setIsFilled(false)
             dispatch(addCandidate({
               id: Math.floor(Math.random() * 10e10),
