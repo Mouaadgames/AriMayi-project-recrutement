@@ -77,7 +77,7 @@ function JobDescription({ job, setSelectedJob }: { job: Job, setSelectedJob: any
               appliedTime: Date.now(),
               cvLink: "/example.pdf",
               email,
-              jobId: job.id,
+              jobTitle: job.roleName,
               name,
               state: "pending",
               phone,
