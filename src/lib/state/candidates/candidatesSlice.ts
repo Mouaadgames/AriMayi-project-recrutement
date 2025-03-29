@@ -9,12 +9,8 @@ type Candidate = {
   cvLink: string,
   state: "pending" | "accepted" | "rejected"
 }
-interface candidatesState {
-  candidates: Candidate[]
-}
 
-const initialState: candidatesState = {
-  candidates: [{
+const initialState: Candidate[] = [{
     id: 1,
     name: 'mouaad el barrik',
     email: 'mouaadelbarrik@gmail.com',
@@ -23,14 +19,14 @@ const initialState: candidatesState = {
     cvLink: "/4ba98dfd985.pdf",
     state: "pending"
   }]
-}
+
 
 const candidatesSlice = createSlice({
   initialState,
   name: "candidates",
   reducers: {
     addCandidate: (state, action: PayloadAction<Candidate>) => {
-      state.candidates.push(action.payload)
+      state.push(action.payload)
     }
   }
 })
