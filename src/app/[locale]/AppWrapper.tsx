@@ -45,9 +45,9 @@ function AppWrapper({ children }: {
         }
       }>
       <Header className="bg-white flex justify-between items-center border-b">
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
           <Link className="underline" href={"/"}>{t("Home")}</Link>
-          <Link className="underline" href={"/Recruiter"}>{t("panel")}</Link>
+          <Link className="underline leading-4" href={"/Recruiter"}>{t("panel")}</Link>
         </div>
         <div className="flex gap-4 items-center">
 
