@@ -1,6 +1,6 @@
 # Recruitment Platform
 
-[View demo](https://arimayi-project-recrutement-deploy.vercel.app/en)
+[View demo](https://ari-mayi-project-recrutement.vercel.app/)
 ## 📌 Description
 A Next.js web app for candidate recruitment, built with Ant Design, Redux, and multi-language support.
 
